@@ -1,0 +1,9 @@
+{{template "layout" .}} {{define "main"}} {{range .}}
+<div class="content">ID : {{ .ID }}</div>
+<div class="content">Name : {{ .Name }}</div>
+<div class="content">Price : Rp{{ .Price }}</div>
+<div class="content">
+  Stock : {{ .Stock }} item{{if gt .Stock 1}}s{{end}}
+  <span style="color: red; font-style: italic">{{.StockStatus}}</span>
+</div>
+{{end}} {{end}}
